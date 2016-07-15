@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
   },
+  "bin" : {
+    "xcode-simulator-finder" : "bin/cli"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 var argv = require('optimist').argv;
-var appInfo = require('./applicationFinder')(argv.os, argv.device);
+var appInfo = require('../applicationFinder')(argv.os, argv.device);
 var exec = require('child_process').exec;
 
 function execute(command, callback){
