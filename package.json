@@ -1,19 +1,28 @@
 {
   "name": "xcode-simulator-finder",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "1.0.1",
+  "description": "CLI script to find the most recent simulator container location",
+  "main": "bin/cli",
   "scripts": {
   },
   "bin" : {
     "xcode-simulator-finder" : "bin/cli"
   },
-  "author": "",
+  "author": "Joshua L Rasmussen xlr8runner@gmail.com",
   "license": "ISC",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/xlr8runner/xcode-simulator-finder"
+  },
+  "keywords" : [
+    "xcode",
+    "simulator"
+  ],
   "dependencies": {
     "optimist": "^0.6.1",
     "plist": "^1.2.0",
     "promise": "^7.1.1",
     "sqlite3": "^3.1.4"
-  }
+  },
+  "preferGlobal" : true
 }
