@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+var argv = require('optimist').argv;
+var appInfo = require('./applicationFinder')(argv.os, argv.device);
+var exec = require('child_process').exec;
+
+function execute(command, callback){
+  exec(command, function(error, stdout, stderr){ callback(stdout); });
+}
+
+if(argv.logs){
+  var logParser = require('./logParser')(appInfo);
+}else if(argv.db){
+  console.log(appInfo.dbPath);
+}else{
+  console.log(appInfo);
+}
